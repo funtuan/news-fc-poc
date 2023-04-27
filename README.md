@@ -1,16 +1,16 @@
 # GPT 新聞營養標示驗證
 
-## description
-
 驗證 [GPT 新聞營養標示](https://g0v.hackmd.io/DuCYmBWsQyy4KtR9HhaJvQ?both) 的可行性
 
-## setup
+## Quick Start
 
-.env
+copy .env.example to .env
 
 ```bash
 OPENAI_TOKEN=sk-xxxxx
 ```
+
+run script
 
 ```bash
 npm install
