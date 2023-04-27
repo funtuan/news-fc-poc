@@ -91,7 +91,7 @@ async function main() {
   const newsLinks = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../data/newsLinks.json'), 'utf8')) as string[];
 
   let data = []
-  for(const newsLink of newsLinks.slice(0, 3)) {
+  for(const newsLink of newsLinks.slice(0, 50)) {
     try {
       const one = await procressNews(newsLink);
       data.push(one);
@@ -102,7 +102,7 @@ async function main() {
       });
     }
     fs.writeFileSync(path.resolve(__dirname, `../data/${saveFileName}`), JSON.stringify(data, null, 2));
-    await delay(1000 * 10);
+    await delay(1000 * 20);
   }
 
 }
